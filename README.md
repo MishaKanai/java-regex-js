@@ -1,6 +1,6 @@
 # java-regex-js
 
-This simply re-exports `Pattern.matcher` from `java.util.regex.Pattern` built using scala-js
+This simply re-exports `Pattern.compile(regex).matcher(input).matches()` from `java.util.regex.Pattern` built using scala-js
 
 ## Usage
 ```ts
