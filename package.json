@@ -1,8 +1,8 @@
 {
   "name": "java-regex-js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
-  "main": "target/scala-2.13/javaregex2js-opt.js",
+  "main": "target/scala-2.13/javaregex2js-opt/main.js",
   "types": "main.d.ts",
   "scripts": {
     "test": "test"
