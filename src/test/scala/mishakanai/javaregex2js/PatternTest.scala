@@ -9,6 +9,8 @@ object PatternTest extends TestSuite {
       assert(Main.compile(".a")("b") == false)
       assert(Main.compile(".a")("a") == false) // true in js regexes, but false in java
       assert(Main.compile(".a")("ba") == true)
+      assert(Main.compile("a", Main.CASE_INSENSITIVE)("A") == true)
+      assert(Main.compile("a.*", Main.CASE_INSENSITIVE | Main.DOTALL)("A\nb") == true)
     }
   }
 }
