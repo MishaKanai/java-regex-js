@@ -7,4 +7,9 @@ libraryDependencies += "com.lihaoyi" %%% "utest" % "0.7.4" % "test"
 
 testFrameworks += new TestFramework("utest.runner.Framework")
 
-scalaJSLinkerConfig ~= { _.withModuleKind(ModuleKind.CommonJSModule) }
+val ESVersion = org.scalajs.linker.interface.ESVersion
+
+scalaJSLinkerConfig ~= {
+    _.withModuleKind(ModuleKind.CommonJSModule)
+    .withESFeatures(_.withESVersion(ESVersion.ES2018))
+}
